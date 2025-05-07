@@ -69,11 +69,18 @@ body {
     gap: 1rem;
   }
   
+  .card .content img:not(.profile) {
+    max-width: 200px;
+    height: auto;
+    align-self: center;
+    border-radius: 4px;
+  }
+  
   .profile {
     width: 150px;
     align-self: center;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
   
   footer {
