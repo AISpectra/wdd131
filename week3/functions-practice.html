@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Functions</title>
+</head>
+<body>
+  <h1 id="fullName"></h1>
+
+  <script>
+    let firstName = 'Antonia';
+    let lastName = 'Francesca';
+
+
+    function fullName(first, last) {
+      return `${first} ${last}`;
+    }
+
+ 
+    document.getElementById('fullName').textContent = fullName(firstName, lastName);
+  </script>
+</body>
+</html>
