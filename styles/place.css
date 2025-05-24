@@ -55,7 +55,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive layout */
+
 @media (min-width: 700px) {
   .weather h2::after {
     content: "";

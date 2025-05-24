@@ -1,6 +1,6 @@
 // place.js
 
-// Mostrar el año actual y la última fecha de modificación
+
 document.addEventListener("DOMContentLoaded", () => {
   const yearSpan = document.querySelector("#year");
   const modifiedSpan = document.querySelector("#lastModified");
@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   yearSpan.textContent = today.getFullYear();
   modifiedSpan.textContent = document.lastModified;
 
-  // Valores estáticos de ejemplo
-  const temperature = 10; // en °C
-  const windSpeed = 5;    // en km/h
+  
+  const temperature = 10; 
+  const windSpeed = 5;    
 
   const windChillSpan = document.querySelector("#windchill");
   const windChill = calculateWindChill(temperature, windSpeed);
@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Función para calcular windchill en °C
+
 function calculateWindChill(tempC, speedKmh) {
-  // Fórmula canadiense en °C
+  
   return (
     13.12 +
     0.6215 * tempC -
