@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Array Functions Practice</title>
+</head>
+<body>
+  <h1>Open the Console to See Results</h1>
+
+  <script>
+    let names = ['Nancy', 'Blessing', 'Jorge', 'Svetlana', 'Bob'];
+
+    let namesB = names.filter(name => name.startsWith('B'));
+    console.log("Names starting with B:", namesB); // ['Blessing', 'Bob']
+
+    let namesLength = names.map(name => name.length);
+    console.log("Lengths of each name:", namesLength); // [5, 8, 5, 8, 3]
+
+    let averageLength = names.reduce((sum, name) => sum + name.length, 0) / names.length;
+    console.log("Average length of names:", averageLength); // 5.8
+  </script>
+</body>
+</html>
