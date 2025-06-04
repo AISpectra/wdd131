@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Review Submitted</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+  <main>
+    <h1>Thank You for Your Review!</h1>
+    <p>Your review for <strong id="productName"></strong> has been received.</p>
+    <p>Total reviews submitted in this browser: <strong id="reviewCount">0</strong></p>
+    <a href="form.html">Submit another review</a>
+  </main>
+
+  <footer>
+    <p>©2025 💫 Samuel Expósito Ruiz 💫<br />Spain<br />
+    Last Modification: <span id="modDate"></span></p>
+  </footer>
+
+  <script>
+  const products = [
+    { id: 'product1', name: 'Wireless Headphones' },
+    { id: 'product2', name: 'Smartwatch X2' },
+    { id: 'product3', name: 'UltraSlim Laptop' },
+    { id: 'product4', name: 'Eco Blender' },
+    { id: 'product5', name: 'LED Monitor 27"' }
+  ];
+
+  const params = new URLSearchParams(window.location.search);
+  const productId = params.get('product');
+
+  const productObj = products.find(p => p.id === productId);
+  const productName = productObj ? productObj.name : '(no product selected)';
+  document.getElementById('productName').textContent = productName;
+
+  const count = localStorage.getItem('reviewCount');
+  const newCount = count ? parseInt(count) + 1 : 1;
+  localStorage.setItem('reviewCount', newCount);
+  document.getElementById('reviewCount').textContent = newCount;
+
+  const lastMod = new Date(document.lastModified);
+  document.getElementById('modDate').textContent = lastMod.toLocaleString();
+</script>
+
+</body>
+</html>
