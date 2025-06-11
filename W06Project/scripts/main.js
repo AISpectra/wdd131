@@ -1,6 +1,4 @@
-// scripts/main.js
-
-// Ejemplo: mensajes de ánimo aleatorios mostrados en la página principal
+// Mensajes de ánimo aleatorios
 const messages = [
   "You are enough, just as you are.",
   "Take a deep breath, you're doing great.",
@@ -22,5 +20,30 @@ function displayMessage() {
   main.appendChild(messageEl);
 }
 
-// Mostrar el mensaje al cargar la página
-window.addEventListener("DOMContentLoaded", displayMessage);
+// Contador de visitas con localStorage
+function updateVisitCount() {
+  let count = Number(localStorage.getItem("visits")) || 0;
+  count++;
+  localStorage.setItem("visits", count);
+  document.getElementById("visit-count").textContent = count;
+}
+
+// Lazy loading para imágenes con data-src
+function lazyLoadImages() {
+  const lazyImages = document.querySelectorAll("img.lazy");
+
+  lazyImages.forEach(img => {
+    const src = img.getAttribute("data-src");
+    if (src) {
+      img.src = src;
+      img.removeAttribute("data-src");
+    }
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  displayMessage();
+  updateVisitCount();
+  lazyLoadImages();
+});
+

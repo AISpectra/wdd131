@@ -1,4 +1,3 @@
-<!-- form.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,24 +17,30 @@
     </nav>
   </header>
   <main>
-    <h1>Join the Spectra Community</h1>
+    <h1 class="page-title">Join the Spectra Community</h1>
+    
     <form id="signupForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <fieldset>
+        <legend>Sign Up</legend>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="preference">How would you like to use Spectra?</label>
-      <select id="preference" name="preference" required>
-        <option value="" disabled selected>Select an option</option>
-        <option value="support">Emotional Support</option>
-        <option value="meditation">Meditation</option>
-        <option value="journal">Gratitude Journal</option>
-      </select>
+        <label for="preference">How would you like to use Spectra?</label>
+        <select id="preference" name="preference" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="support">Emotional Support</option>
+          <option value="meditation">Meditation</option>
+          <option value="journal">Gratitude Journal</option>
+        </select>
 
-      <button type="submit">Subscribe</button>
+        <button type="submit">Subscribe</button>
+      </fieldset>
     </form>
+
     <p id="confirmation"></p>
   </main>
   <footer>
