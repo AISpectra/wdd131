@@ -1,8 +1,8 @@
-// scripts/form.js
+
 const form = document.getElementById('signupForm');
 const confirmation = document.getElementById('confirmation');
 
-// Load saved name on page load (example use of localStorage)
+
 window.addEventListener('DOMContentLoaded', () => {
   const savedName = localStorage.getItem('spectraName');
   if (savedName) {
@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// Handle form submission
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 

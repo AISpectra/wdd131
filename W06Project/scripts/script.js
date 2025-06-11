@@ -1,11 +1,9 @@
-// script.js
 
-// === GLOBAL VARIABLES ===
 let visitCount = localStorage.getItem("visit-count") || 0;
 visitCount++;
 localStorage.setItem("visit-count", visitCount);
 
-// === DISPLAY VISIT COUNT IF ELEMENT EXISTS ===
+
 document.addEventListener("DOMContentLoaded", () => {
   const visitDisplay = document.getElementById("visit-count");
   if (visitDisplay) {
@@ -13,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// === FORM HANDLING ===
+
 function handleFormSubmission(event) {
   event.preventDefault();
 
@@ -26,7 +24,7 @@ function handleFormSubmission(event) {
   event.target.reset();
 }
 
-// Attach handler if form exists
+
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector("form");
   if (form) {
@@ -34,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// === LAZY LOADING FOR IMAGES ===
+
 document.addEventListener("DOMContentLoaded", () => {
   const lazyImages = document.querySelectorAll("img[loading='lazy']");
   lazyImages.forEach((img) => {

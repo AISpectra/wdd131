@@ -1,6 +1,4 @@
-/* styles.css - W06 Project */
 
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -60,19 +58,18 @@ img {
   height: auto;
 }
 
-/* Responsive */
 @media (min-width: 768px) {
   nav {
     justify-content: space-around;
   }
 }
 
-/* Utility classes */
+
 .hidden {
   display: none;
 }
 
-/* Lazy Loading Image Container */
+
 .lazy {
   opacity: 0;
   transition: opacity 0.5s ease-in;
